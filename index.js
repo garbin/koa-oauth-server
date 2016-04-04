@@ -41,7 +41,7 @@ KoaOAuthServer.prototype.authenticate = function() {
 
   return function *(next) {
     var request = new Request(this.request);
-    var response = new Request(this.response);
+    var response = new Response(this.response);
 
     try {
       this.state.oauth = {
